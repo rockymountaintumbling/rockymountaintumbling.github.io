@@ -5,7 +5,7 @@ function Level4_5() {
   return (
     <ClassTemplate
       title="Level 4.5 Tumbling"
-      heroImage="/classes/level-4-5.png"
+      heroImage="/classes/level-4-5.jpg"
       description="Level 4.5 tumbling focuses on mastering standing and running back-handsprings while introducing advanced skills on trampoline. This class emphasizes perfecting continuous back-handsprings and preparing athletes for back and front tuck progressions, building the foundation for advanced tumbling skills."
       ageRange="Ages 6+"
       prerequisites={[

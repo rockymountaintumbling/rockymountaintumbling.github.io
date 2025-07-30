@@ -5,7 +5,7 @@ function Level6() {
   return (
     <ClassTemplate
       title="Level 6 Tumbling"
-      heroImage="/classes/level-6.png"
+      heroImage="/classes/level-6.jpg"
       description="Level 6 tumbling is an elite class focused on mastering advanced skills and complex combinations. Athletes will perfect their tucks and whips while developing advanced tumbling sequences, preparing them for high-level competition and advanced gymnastics progression."
       ageRange="Ages 8+"
       prerequisites={[

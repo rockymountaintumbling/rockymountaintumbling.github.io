@@ -5,7 +5,7 @@ function Level2_5() {
   return (
     <ClassTemplate
       title="Level 2.5 Tumbling"
-      heroImage="/classes/level-2-5.png"
+      heroImage="/classes/level-2-5.jpg"
       description="Level 2.5 is designed to build a strong foundation in tumbling fundamentals. Students will learn proper technique, safety awareness, and essential skills while developing strength, flexibility, and confidence. This class bridges the gap between basic movements and more advanced tumbling skills."
       ageRange="Ages 3+"
       prerequisites={[

@@ -5,7 +5,7 @@ function Level4() {
   return (
     <ClassTemplate
       title="Level 4 Tumbling"
-      heroImage="/classes/level-4.png"
+      heroImage="/classes/level-4.jpg"
       description="Level 4 tumbling focuses on mastering fundamental skills independently while introducing continuous back-handsprings with coach assistance. This advanced class builds upon the strong foundation established in Level 3.5, preparing athletes for more complex tumbling sequences and combinations."
       ageRange="Ages 6+"
       prerequisites={[

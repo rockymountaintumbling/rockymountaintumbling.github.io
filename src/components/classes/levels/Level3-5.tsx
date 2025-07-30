@@ -5,7 +5,7 @@ function Level3_5() {
   return (
     <ClassTemplate
       title="Level 3.5 Tumbling"
-      heroImage="/classes/level-3-5.png"
+      heroImage="/classes/level-3-5.jpg"
       description="Level 3.5 tumbling is designed to perfect Level 3 skills while preparing athletes for more advanced techniques. This class focuses on mastering back-handsprings and limber skills with excellent form and consistency, setting a strong foundation for future progression. Students will develop increased strength, flexibility, and technical precision."
       ageRange="Ages 6+"
       prerequisites={[
