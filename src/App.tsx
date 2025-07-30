@@ -275,11 +275,13 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <img src="/logo.png" alt="Rocky Mountain Tumbling" className="h-12 w-auto mr-3" />
-              <h1 className="text-2xl font-bold text-[#FF1494]">
-                <span className="md:hidden">RMT</span>
-                <span className="hidden md:inline">Rocky Mountain Tumbling</span>
-              </h1>
+              <a href="#home" className="flex items-center">
+                <img src="/logo.png" alt="Rocky Mountain Tumbling" className="h-12 w-auto mr-3" />
+                <h1 className="text-2xl font-bold text-[#FF1494]">
+                  <span className="md:hidden">RMT</span>
+                  <span className="hidden md:inline">Rocky Mountain Tumbling</span>
+                </h1>
+              </a>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#home" className="text-gray-700 hover:text-[#FF1494]">Home</a>
