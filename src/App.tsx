@@ -293,9 +293,51 @@ function Home() {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 right-0 bg-white shadow-lg md:hidden">
             <div className="flex flex-col items-center py-4 space-y-4">
-              <a href="#home" onClick={closeMenu} className="text-xl text-gray-700 hover:text-[#FF1494]">Home</a>
-              <a href="#classes" onClick={closeMenu} className="text-xl text-gray-700 hover:text-[#FF1494]">Classes</a>
-              <a href="#contact" onClick={closeMenu} className="text-xl text-gray-700 hover:text-[#FF1494]">Contact</a>
+              <a 
+                href="#home" 
+                onClick={(e) => {
+                  closeMenu();
+                  setTimeout(() => {
+                    const element = document.getElementById('home');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 100);
+                }} 
+                className="text-xl text-gray-700 hover:text-[#FF1494]"
+              >
+                Home
+              </a>
+              <a 
+                href="#classes" 
+                onClick={(e) => {
+                  closeMenu();
+                  setTimeout(() => {
+                    const element = document.getElementById('classes');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 100);
+                }} 
+                className="text-xl text-gray-700 hover:text-[#FF1494]"
+              >
+                Classes
+              </a>
+              <a 
+                href="#contact" 
+                onClick={(e) => {
+                  closeMenu();
+                  setTimeout(() => {
+                    const element = document.getElementById('contact');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }, 100);
+                }} 
+                className="text-xl text-gray-700 hover:text-[#FF1494]"
+              >
+                Contact
+              </a>
               <MoreDropdown isMobile={true} onItemClick={closeMenu} />
               <a 
                 href="https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=528475"
