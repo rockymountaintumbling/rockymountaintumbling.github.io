@@ -660,9 +660,37 @@ function Home() {
               <h3 className="text-xl font-bold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><a href="#home" className="text-gray-400 hover:text-white">Home</a></li>
-                <li><a href="#classes" className="text-gray-400 hover:text-white">Classes</a></li>
+                <li>
+                  <a 
+                    href="#classes" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById('classes');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Classes
+                  </a>
+                </li>
                 <li><Link to="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
-                <li><a href="#contact" className="text-gray-400 hover:text-white">Contact</a></li>
+                <li>
+                  <a 
+                    href="#contact" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.getElementById('contact');
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
