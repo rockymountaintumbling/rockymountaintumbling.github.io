@@ -180,6 +180,7 @@ function ReviewCard({ review, onSlideChange }) {
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [menuRef, setMenuRef] = useState<HTMLDivElement | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -224,6 +225,22 @@ function Home() {
       window.scrollTo(0, state.scrollY);
     }
   }, [location]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isMenuOpen && menuRef && !menuRef.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen, menuRef]);
 
   const reviews = [
     {
@@ -291,7 +308,10 @@ function Home() {
         </div>
 
         {isMenuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-white shadow-lg md:hidden">
+          <div 
+            ref={setMenuRef}
+            className="absolute top-16 left-0 right-0 bg-white shadow-lg md:hidden"
+          >
             <div className="flex flex-col items-center py-4 space-y-4">
               <a 
                 href="#home" 
