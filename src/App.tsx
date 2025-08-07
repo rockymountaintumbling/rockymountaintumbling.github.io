@@ -47,11 +47,11 @@ function MoreDropdown({ isMobile = false, onItemClick = () => {} }) {
   };
 
   const items = [
+    { label: 'Our Staff', url: '/staff' },
     { label: 'Pricing', url: '/pricing' },
     { label: 'Pro Shop', url: 'https://rmtwear.com/' },
     { label: 'Holiday Hours', url: '/holiday-hours' },
     { label: 'Parent Volunteers', url: '/parent-volunteers' },
-    { label: 'Our Staff', url: '/staff' },
     { label: 'FAQ', url: '/faq' },
     { label: 'Open Gym', url: '/open-gym' },
     { label: 'Preschool', url: 'https://www.rockymountainlearningacademy.com/' },
