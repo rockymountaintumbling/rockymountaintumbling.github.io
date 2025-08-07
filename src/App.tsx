@@ -3,6 +3,7 @@ import { Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom'
 import { Award, Calendar, MapPin, Phone, Mail, Facebook, Instagram, Clock, Medal, Shield, Star, ArrowUp, Menu, X, ChevronDown, Quote } from 'lucide-react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import OptimizedImage from './components/ImageOptimizer';
 import Staff from './components/Staff';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -381,10 +382,13 @@ function Home() {
       <section id="home" className="pt-20">
         <div className="relative h-[600px]">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/30 z-10" />
-          <img 
+          <OptimizedImage 
             src="/hero.jpg"
             alt="Gymnast performing"
             className="w-full h-full object-cover"
+            priority={true}
+            width={1920}
+            height={600}
           />
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -415,10 +419,12 @@ function Home() {
           <div className="grid lg:grid-cols-12 gap-8">
             <div className="lg:col-span-7 space-y-6">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <img 
+                <OptimizedImage 
                   src="/about-us.jpg"
                   alt="Our Facility"
                   className="w-full h-[400px] object-cover"
+                  width={800}
+                  height={400}
                 />
               </div>
               <div className="flex justify-center items-center space-x-4">
@@ -530,10 +536,12 @@ function Home() {
               }
             ].map((className, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 flex flex-col">
-                <img 
+                <OptimizedImage 
                   src={className.image} 
                   alt={className.title}
                   className="w-full h-48 object-cover"
+                  width={400}
+                  height={192}
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-2">{className.title}</h3>

@@ -87,7 +87,7 @@ function Pricing() {
 
           <PriceCard
             title="Competition Team"
-            price="$160 - $250/month"
+            price="$160-$250/month"
             description="For dedicated athletes ready to compete"
             icon={Award}
             highlight={true}

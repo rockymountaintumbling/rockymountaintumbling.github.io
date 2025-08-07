@@ -3,6 +3,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import OptimizedImage from './ImageOptimizer';
 
 const staffMembers = [
   {
@@ -291,10 +292,12 @@ function Staff() {
           {staffMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
               <div className="w-full aspect-[5/7]">
-                <img
+                <OptimizedImage
                   src={member.image}
                   alt={member.name}
                   className="h-full w-full object-contain bg-gray-50"
+                  width={400}
+                  height={560}
                 />
               </div>
               <div className="p-6">
@@ -339,10 +342,12 @@ function Staff() {
             {funPhotos.map((photo, index) => (
               <div key={index} className="keen-slider__slide">
                 <div className="relative rounded-xl overflow-hidden shadow-lg aspect-video">
-                  <img
+                  <OptimizedImage
                     src={photo.url}
                     alt={photo.caption}
                     className="w-full h-full object-cover"
+                    width={600}
+                    height={338}
                   />
                 </div>
               </div>
