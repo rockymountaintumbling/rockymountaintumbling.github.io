@@ -539,9 +539,9 @@ function Home() {
                 <OptimizedImage 
                   src={className.image} 
                   alt={className.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-64 object-cover"
                   width={400}
-                  height={192}
+                  height={256}
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-2">{className.title}</h3>
