@@ -24,6 +24,14 @@ function OptimizedImage({
   const [currentSrc, setCurrentSrc] = useState(placeholder);
   const imgRef = useRef<HTMLImageElement>(null);
 
+  // For priority images, start loading immediately
+  useEffect(() => {
+    if (priority && src !== placeholder) {
+      setCurrentSrc(src);
+      setIsLoaded(true);
+    }
+  }, [priority, src, placeholder]);
+
   useEffect(() => {
     if (!priority && imgRef.current) {
       const observer = new IntersectionObserver(
