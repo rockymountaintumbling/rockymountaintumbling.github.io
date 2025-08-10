@@ -425,6 +425,7 @@ function Home() {
                   className="w-full h-[400px] object-cover"
                   width={800}
                   height={400}
+                  aboveFold={true}
                 />
               </div>
               <div className="flex justify-center items-center space-x-4">
@@ -542,6 +543,7 @@ function Home() {
                   className="w-full h-64 object-cover"
                   width={400}
                   height={256}
+                  aboveFold={true}
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-2">{className.title}</h3>
