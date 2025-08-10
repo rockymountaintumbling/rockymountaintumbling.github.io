@@ -33,7 +33,7 @@ function OptimizedImage({
             observer.disconnect();
           }
         },
-        { threshold: 0.1, rootMargin: '50px' }
+        { threshold: 0.1, rootMargin: '100px' }
       );
 
       observer.observe(imgRef.current);
