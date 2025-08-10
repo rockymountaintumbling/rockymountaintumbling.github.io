@@ -21,7 +21,7 @@ function PrivateLessons() {
       <div className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="relative h-[300px]">
+            <div className="relative h-[300px] md:h-[500px]">
               <img 
                 src="/classes/private-lessons.jpg"
                 alt="Private Lessons"
