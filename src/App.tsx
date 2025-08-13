@@ -3,6 +3,7 @@ import { Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom'
 import { Award, Calendar, MapPin, Phone, Mail, Facebook, Instagram, Clock, Medal, Shield, Star, ArrowUp, Menu, X, ChevronDown, Quote } from 'lucide-react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import { useDeepLink } from './hooks/useDeepLink';
 import Staff from './components/Staff';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -27,7 +28,6 @@ import Level6 from './components/classes/levels/Level6';
 import Level7 from './components/classes/levels/Level7';
 import Level8 from './components/classes/levels/Level8';
 import Adults from './components/classes/levels/Adults';
-import { useDeepLink } from './hooks/useDeepLink';
 
 function MoreDropdown({ isMobile = false, onItemClick = () => {} }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -203,10 +203,16 @@ function Home() {
         slides: { perView: 2, spacing: 16 }
       },
     },
+    created() {
+      // Slider created successfully
+    },
+    destroyed() {
+      // Cleanup when slider is destroyed
+    },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     }
-  });
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -387,6 +393,10 @@ function Home() {
             src="/hero.jpg"
             alt="Gymnast performing"
             className="w-full h-full object-cover"
+            onError={(e) => {
+              console.warn('Hero image failed to load');
+              e.currentTarget.style.display = 'none';
+            }}
           />
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -421,6 +431,10 @@ function Home() {
                   src="/about-us.jpg"
                   alt="Our Facility"
                   className="w-full h-[400px] md:h-[500px] object-cover"
+                  onError={(e) => {
+                    console.warn('About us image failed to load');
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
               </div>
               <div className="flex justify-center items-center space-x-4">
@@ -536,6 +550,10 @@ function Home() {
                   src={className.image} 
                   alt={className.title}
                   className="w-full h-48 object-cover"
+                  onError={(e) => {
+                    console.warn(`Class image failed to load: ${className.title}`);
+                    e.currentTarget.style.display = 'none';
+                  }}
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-2">{className.title}</h3>
