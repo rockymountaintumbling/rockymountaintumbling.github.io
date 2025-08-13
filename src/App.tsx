@@ -3,7 +3,6 @@ import { Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom'
 import { Award, Calendar, MapPin, Phone, Mail, Facebook, Instagram, Clock, Medal, Shield, Star, ArrowUp, Menu, X, ChevronDown, Quote } from 'lucide-react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
-import OptimizedImage from './components/ImageOptimizer';
 import Staff from './components/Staff';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -28,7 +27,6 @@ import Level6 from './components/classes/levels/Level6';
 import Level7 from './components/classes/levels/Level7';
 import Level8 from './components/classes/levels/Level8';
 import Adults from './components/classes/levels/Adults';
-import ParentVolunteers from './components/ParentVolunteers';
 
 function MoreDropdown({ isMobile = false, onItemClick = () => {} }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,11 +45,9 @@ function MoreDropdown({ isMobile = false, onItemClick = () => {} }) {
   };
 
   const items = [
-    { label: 'Our Staff', url: '/staff' },
     { label: 'Pricing', url: '/pricing' },
     { label: 'Pro Shop', url: 'https://rmtwear.com/' },
     { label: 'Holiday Hours', url: '/holiday-hours' },
-    { label: 'Parent Volunteers', url: '/parent-volunteers' },
     { label: 'FAQ', url: '/faq' },
     { label: 'Open Gym', url: '/open-gym' },
     { label: 'Preschool', url: 'https://www.rockymountainlearningacademy.com/' },
@@ -382,13 +378,10 @@ function Home() {
       <section id="home" className="pt-20">
         <div className="relative h-[600px]">
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/30 z-10" />
-          <OptimizedImage 
+          <img 
             src="/hero.jpg"
             alt="Gymnast performing"
             className="w-full h-full object-cover"
-            priority={true}
-            width={1920}
-            height={600}
           />
           <div className="absolute inset-0 z-20 flex items-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -419,13 +412,10 @@ function Home() {
           <div className="grid lg:grid-cols-12 gap-8">
             <div className="lg:col-span-7 space-y-6">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <OptimizedImage 
+                <img 
                   src="/about-us.jpg"
                   alt="Our Facility"
-                  className="w-full h-[400px] object-cover"
-                  width={800}
-                  height={400}
-                  aboveFold={true}
+                  className="w-full h-[400px] md:h-[500px] object-cover"
                 />
               </div>
               <div className="flex justify-center items-center space-x-4">
@@ -537,13 +527,10 @@ function Home() {
               }
             ].map((className, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300 flex flex-col">
-                <OptimizedImage 
+                <img 
                   src={className.image} 
                   alt={className.title}
-                  className="w-full h-64 object-cover"
-                  width={400}
-                  height={256}
-                  aboveFold={true}
+                  className="w-full h-48 object-cover"
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-semibold mb-2">{className.title}</h3>
@@ -642,20 +629,20 @@ function Home() {
               </div>
             </div>
             <div>
-              <form action="https://formspree.io/f/meozrenw" method="POST" className="space-y-4">
+              <form className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input type="text" name="name" required className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent" />
+                  <input type="text" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input type="email" name="email" required className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent" />
+                  <input type="email" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea name="message" required className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent h-32"></textarea>
+                  <textarea className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent h-32"></textarea>
                 </div>
-                <button type="submit" className="bg-[#FF1494] text-white px-6 py-2 rounded-full hover:bg-[#D1127A] transition">
+                <button className="bg-[#FF1494] text-white px-6 py-2 rounded-full hover:bg-[#D1127A] transition">
                   Send Message
                 </button>
               </form>
@@ -756,7 +743,6 @@ function App() {
       <Route path="/classes/levels/level-7" element={<Level7 />} />
       <Route path="/classes/levels/level-8" element={<Level8 />} />
       <Route path="/classes/levels/adults" element={<Adults />} />
-      <Route path="/parent-volunteers" element={<ParentVolunteers />} />
     </Routes>
   );
 }
