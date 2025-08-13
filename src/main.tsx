@@ -11,27 +11,34 @@ function ScrollToTop() {
   React.useEffect(() => {
     try {
       // Handle GitHub Pages SPA routing
-      if (location.search.startsWith('?/')) {
-        const searchParams = location.search.slice(2);
-        const route = searchParams.split('&')[0] || '/';
-        const hash = location.hash;
+      const search = window.location.search;
+      if (search.includes('?/')) {
+        // Extract the route from GitHub Pages redirect format
+        const searchParams = new URLSearchParams(search);
+        const redirectPath = Array.from(searchParams.keys()).find(key => key.startsWith('/'));
         
-        // Replace the current URL with the clean route
-        window.history.replaceState(null, '', route + hash);
-        
-        // If there's a hash, scroll to it after a short delay
-        if (hash) {
-          setTimeout(() => {
-            const elementId = hash.substring(1);
-            const element = document.getElementById(elementId);
-            if (element) {
-              element.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          }, 100);
-          return; // Don't scroll to top if we have a hash
+        if (redirectPath) {
+          // Clean up the URL and navigate
+          const cleanPath = redirectPath.replace(/~and~/g, '&');
+          const hash = window.location.hash;
+          
+          // Replace the current URL with the clean route
+          window.history.replaceState(null, '', cleanPath + hash);
+          
+          // If there's a hash, scroll to it after a delay
+          if (hash) {
+            setTimeout(() => {
+              const elementId = hash.substring(1);
+              const element = document.getElementById(elementId);
+              if (element) {
+                element.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            }, 300);
+            return; // Don't scroll to top if we have a hash
+          }
         }
       }
       
