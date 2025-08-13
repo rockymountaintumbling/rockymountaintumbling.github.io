@@ -12,7 +12,8 @@ function ScrollToTop() {
     try {
       // Handle GitHub Pages SPA routing
       if (location.search.startsWith('?/')) {
-        const route = location.search.slice(2) || '/';
+        const searchParams = location.search.slice(2);
+        const route = searchParams.split('&')[0] || '/';
         const hash = location.hash;
         
         // Replace the current URL with the clean route
