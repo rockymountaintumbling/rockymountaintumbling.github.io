@@ -10,6 +10,30 @@ function ScrollToTop() {
   
   React.useEffect(() => {
     try {
+      // Handle GitHub Pages SPA routing
+      if (location.search.startsWith('?/')) {
+        const route = location.search.slice(2) || '/';
+        const hash = location.hash;
+        
+        // Replace the current URL with the clean route
+        window.history.replaceState(null, '', route + hash);
+        
+        // If there's a hash, scroll to it after a short delay
+        if (hash) {
+          setTimeout(() => {
+            const elementId = hash.substring(1);
+            const element = document.getElementById(elementId);
+            if (element) {
+              element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }, 100);
+          return; // Don't scroll to top if we have a hash
+        }
+      }
+      
       // Only scroll to top if we're not returning from a sub-page
       if (!window.history.state?.from) {
         window.scrollTo(0, 0);
