@@ -13,7 +13,7 @@ interface SEOHeadProps {
 function SEOHead({
   title = "Rocky Mountain Tumbling & Cheer | Utah's Premier Gymnastics Facility | Clearfield UT",
   description = "Utah's premier tumbling and cheer facility in Clearfield. Expert coaching, USA Gymnastics certified, recreation & competition classes for all ages. 19,000+ sq ft facility.",
-  keywords = "tumbling classes Utah, gymnastics Clearfield, cheer classes Utah, tumbling lessons, gymnastics training, USA Gymnastics certified, competition tumbling, recreation tumbling, private lessons, Clearfield gymnastics, Utah cheer, tumbling facility",
+  keywords = "tumbling classes Utah, gymnastics Clearfield, cheer classes Utah, tumbling lessons, gymnastics training, USA Gymnastics certified, competition tumbling, recreation tumbling, private lessons, Clearfield gymnastics, Utah cheer, tumbling facility, power tumbling",
   image = "/hero.jpg",
   url = "https://rockymountaintumbling.com",
   type = "website"

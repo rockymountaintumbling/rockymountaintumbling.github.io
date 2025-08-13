@@ -27,6 +27,7 @@ import Level6 from './components/classes/levels/Level6';
 import Level7 from './components/classes/levels/Level7';
 import Level8 from './components/classes/levels/Level8';
 import Adults from './components/classes/levels/Adults';
+import { useDeepLink } from './hooks/useDeepLink';
 
 function MoreDropdown({ isMobile = false, onItemClick = () => {} }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -185,6 +186,9 @@ function Home() {
   const navigate = useNavigate();
   const location = useLocation();
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Enable deep linking
+  useDeepLink();
   
   const [sliderRef] = useKeenSlider({
     slides: {
@@ -401,7 +405,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section id="why-choose-us" className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Choose Us</h2>
@@ -562,7 +566,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section id="reviews" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">What Our Community Says</h2>
@@ -652,7 +656,7 @@ function Home() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer id="footer" className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
