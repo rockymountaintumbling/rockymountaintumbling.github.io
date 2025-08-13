@@ -45,6 +45,7 @@ function MoreDropdown({ isMobile = false, onItemClick = () => {} }) {
   };
 
   const items = [
+    { label: 'Our Staff', url: '/staff' },
     { label: 'Pricing', url: '/pricing' },
     { label: 'Pro Shop', url: 'https://rmtwear.com/' },
     { label: 'Holiday Hours', url: '/holiday-hours' },
