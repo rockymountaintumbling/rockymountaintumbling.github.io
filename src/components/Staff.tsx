@@ -206,10 +206,6 @@ const funPhotos = [
     caption: "Competition Day"
   },
   {
-    url: "/staff/carousel/coaches-4.jpg",
-    caption: "Team Celebration"
-  },
-  {
     url: "/staff/carousel/coaches-5.jpg",
     caption: "Staff Meeting"
   }
