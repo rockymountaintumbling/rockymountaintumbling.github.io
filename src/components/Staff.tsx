@@ -166,11 +166,11 @@ const staffMembers = [
   {
     name: "Mya Campbell",
     role: "Rec Tumbling/Cheer Coach",
-    experience: "13+ years in Cheer (10 years All-Star Cheer) | 3 years High School Cheer | 5 years College Cheer | 2 years Jazz Stunt Team",
+    experience: "13+ years in Cheer | 4 years High School Cheer | 4 years College Cheer",
     image: "/staff/campbell-mya.jpg",
     bio: "With nearly 13 years of cheerleading experience, Mya brings passion, energy, and a championship mindset to every class. She is a proud NCA Collegiate National and Grand National Champion with Weber State, and has been coaching on and off for the past three years. Currently pursuing a degree in Business Administration with a minor in Psychology, Mya blends her academic background with her love for cheer to create a fun, encouraging, and engaging environment for athletes of all levels. At RMT, she feels right at home: \"It feels like family, and there's always something new to work on—you never get bored!\" Known for her upbeat personality and love for connecting with athletes, Mya keeps her classes exciting with creative games and plenty of laughter. Her goal? To help every athlete grow, have fun, and feel like they're part of something special.",
     achievements: [
-      "NCA College National Champion"
+      "Grand NCA College National Champion"
     ]
   },
   {
