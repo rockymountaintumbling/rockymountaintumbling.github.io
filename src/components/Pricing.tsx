@@ -76,7 +76,7 @@ function Pricing() {
             description="Perfect for beginners and intermediate athletes"
             icon={Users}
             features={[
-              "Each additional hour: 25% off ($48.74/month)",
+              "Each additional hour: 25% off ($48.75/month)",
               "2nd student: 10% off ($58.50/month)",
               "3rd student: 40% off ($39/month)",
               "Flexible class schedules",
