@@ -6,39 +6,39 @@ function HolidayHours() {
   const holidays = [
     {
       name: "Spring Break",
-      dates: "Monday March 31st – Friday April 4th"
+      dates: "Monday March 30th – Friday April 3rd"
     },
     {
       name: "Memorial Day",
-      dates: "Monday May 26th"
+      dates: "Monday May 25th"
     },
     {
       name: "Independence Day",
-      dates: "Friday July 4th"
+      dates: "Friday July 3rd"
     },
     {
       name: "Pioneer Day",
-      dates: "Thursday July 24th"
+      dates: "Friday July 24th"
     },
     {
       name: "Labor Day",
-      dates: "Monday September 1st"
+      dates: "Monday September 7th"
     },
     {
       name: "Fall Break",
-      dates: "Thursday October 16th – Friday October 17th"
+      dates: "Wednesday October 14th – Friday October 16th"
     },
     {
       name: "Halloween",
-      dates: "Friday October 31st"
+      dates: "Friday October 30st"
     },
     {
       name: "Thanksgiving Break",
-      dates: "Wednesday November 26th – Friday November 28th"
+      dates: "Wednesday November 25th – Friday November 27th"
     },
     {
       name: "Winter Break",
-      dates: "December 22nd – January 2nd"
+      dates: "Monday December 21st – Thursday December 31st"
     }
   ];
 
@@ -64,7 +64,7 @@ function HolidayHours() {
               <div className="flex items-center justify-center mb-8">
                 <Calendar className="w-12 h-12 text-[#FF1494]" />
               </div>
-              <h1 className="text-4xl font-bold text-center mb-2">2025 Holiday Hours</h1>
+              <h1 className="text-4xl font-bold text-center mb-2">2026 Holiday Hours</h1>
               <p className="text-gray-600 text-center mb-8">
                 Please note the following dates when the gym will be closed
               </p>
@@ -82,7 +82,7 @@ function HolidayHours() {
 
                 <div className="bg-[#FF1494]/5 rounded-xl p-6 mt-8">
                   <h3 className="text-xl font-semibold text-[#FF1494] mb-2">Classes Resume</h3>
-                  <p className="text-gray-700">Monday January 5th, 2026</p>
+                  <p className="text-gray-700">Monday January 4th, 2026</p>
                 </div>
               </div>
 

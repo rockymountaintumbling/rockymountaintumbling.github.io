@@ -85,7 +85,7 @@ function OpenGym() {
                       </div>
                       <div>
                         <h3 className="text-xl font-semibold mb-2">Pricing</h3>
-                        <p className="text-gray-600">$5 per athlete</p>
+                        <p className="text-gray-600">$10 per athlete</p>
                       </div>
                     </div>
                   </div>
@@ -114,13 +114,16 @@ function OpenGym() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Required Waiver</h3>
+                      <p className="text-gray-600 mb-3">
+                        Complete your waiver online before participating:
+                      </p>
                       <a 
                         href="https://docs.google.com/forms/d/e/1FAIpQLSfPAuG-RUqmsHdhGgQQl4tzr8ohpZ0EwWZy6wDrEHnSXV3ZSQ/viewform"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#FF1494] hover:text-[#D1127A] font-semibold"
                       >
-                        Complete Waiver Form
+                        Complete Waiver Form Online
                       </a>
                     </div>
                   </div>

@@ -28,6 +28,7 @@ import Level6 from './components/classes/levels/Level6';
 import Level7 from './components/classes/levels/Level7';
 import Level8 from './components/classes/levels/Level8';
 import Adults from './components/classes/levels/Adults';
+import BirthdayPartyRentals from './components/BirthdayPartyRentals';
 
 function MoreDropdown({ isMobile = false, onItemClick = () => {} }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,7 @@ function MoreDropdown({ isMobile = false, onItemClick = () => {} }) {
     { label: 'Holiday Hours', url: '/holiday-hours' },
     { label: 'FAQ', url: '/faq' },
     { label: 'Open Gym', url: '/open-gym' },
+    { label: 'Party Rentals', url: '/birthday-party-rentals' },
     { label: 'Preschool', url: 'https://www.rockymountainlearningacademy.com/' },
   ];
 
@@ -766,6 +768,7 @@ function App() {
       <Route path="/classes/levels/level-7" element={<Level7 />} />
       <Route path="/classes/levels/level-8" element={<Level8 />} />
       <Route path="/classes/levels/adults" element={<Adults />} />
+      <Route path="/birthday-party-rentals" element={<BirthdayPartyRentals />} />
     </Routes>
   );
 }

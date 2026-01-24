@@ -31,6 +31,20 @@ function FAQ() {
       answer: "Yes! We have a designated viewing area where parents can watch their athletes train. We encourage parents to be part of their athlete's journey while maintaining a distraction-free training environment."
     },
     {
+      question: "Do you offer birthday or party rentals?",
+      answer: (
+        <>
+          Yes, we do! If you're interested in booking a birthday or party rental, please click the link below to fill out our request form and we'll get back to you with availability and details.
+          
+          <div className="mt-4">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8ju43hpu6lxPY6Mp4CejSkdyHgZQWJToY8CZ1RT_9SAraTQ/viewform?usp=sf_link" target="_blank" className="text-[#FF1494] hover:text-[#D1127A] font-semibold">
+              Rental Request Form
+            </a>
+          </div>
+        </>
+      )
+    },
+    {
       question: "What is a rod floor?",
       answer: (
         <>
@@ -138,13 +152,15 @@ function FAQ() {
             <p className="text-lg text-gray-600 mb-4">
               Have additional questions? We're here to help!
             </p>
-            <a 
-              href="tel:+18016866731"
-              className="inline-flex items-center text-[#FF1494] hover:text-[#D1127A] text-xl font-semibold"
-            >
-              <Phone className="w-6 h-6 mr-2" />
-              (801) 686-6731
-            </a>
+            <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
+              <a 
+                href="tel:+18016866731"
+                className="inline-flex items-center text-[#FF1494] hover:text-[#D1127A] text-xl font-semibold"
+              >
+                <Phone className="w-6 h-6 mr-2" />
+                (801) 686-6731
+              </a>
+            </div>
           </div>
         </div>
       </div>
