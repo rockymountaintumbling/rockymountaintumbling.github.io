@@ -94,7 +94,7 @@ function BirthdayPartyRentals() {
                         </li>
                         <li className="flex items-center">
                           <Star className="w-4 h-4 text-[#FF1494] mr-2" />
-                          Trampolines and foam pits
+                          Trampolines
                         </li>
                         <li className="flex items-center">
                           <Star className="w-4 h-4 text-[#FF1494] mr-2" />
