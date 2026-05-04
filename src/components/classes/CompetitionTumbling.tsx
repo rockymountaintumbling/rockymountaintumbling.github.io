@@ -93,7 +93,7 @@ function CompetitionTumbling() {
                   <h3 className="text-xl font-semibold mb-4">Pricing</h3>
                   <ul className="space-y-2 text-gray-600">
                     <li>• Team 5 hours/week = $160/month</li>
-                    <li>• Team 7 hours/week = $200/month</li>
+                    <li>• Team 7 hours/week = $210/month</li>
                     <li>• Team 9 Hours/week = $250/month</li>
                     <li>• Additional fees apply for competitions</li>
                   </ul>
