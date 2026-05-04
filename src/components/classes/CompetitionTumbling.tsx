@@ -99,8 +99,8 @@ function CompetitionTumbling() {
                   </ul>
                 </div>
 
-                <div className="text-center">
-                  <a 
+                <div className="text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <a
                     href="https://app.jackrabbitclass.com/regv2.asp?id=528475"
                     target="_blank"
                     rel="noopener noreferrer"
