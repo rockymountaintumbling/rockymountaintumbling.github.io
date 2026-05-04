@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Download } from 'lucide-react';
 
 function CompetitionTumbling() {
   return (
@@ -107,6 +107,14 @@ function CompetitionTumbling() {
                     className="bg-[#FF1494] text-white px-8 py-3 rounded-full text-lg hover:bg-[#D1127A] transition inline-block"
                   >
                     Join Our Team
+                  </a>
+                  <a
+                    href="/docs/Competition_Tumbling_2026-2027_Packet.pdf"
+                    download="Competition_Tumbling_2026-2027_Packet.pdf"
+                    className="flex items-center gap-2 bg-white text-[#FF1494] border-2 border-[#FF1494] px-8 py-3 rounded-full text-lg hover:bg-[#FF1494] hover:text-white transition inline-block"
+                  >
+                    <Download className="w-5 h-5" />
+                    2026-2027 Comp Team Package Details
                   </a>
                 </div>
               </div>
