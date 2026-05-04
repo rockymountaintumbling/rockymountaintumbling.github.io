@@ -93,7 +93,7 @@ function Pricing() {
             highlight={true}
             features={[
               "5 hours/week: $160/month",
-              "7 hours/week: $200/month",
+              "7 hours/week: $210/month",
               "9 hours/week: $250/month",
               "Professional coaching",
               "Competition preparation",

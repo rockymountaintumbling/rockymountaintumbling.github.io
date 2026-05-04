@@ -654,18 +654,18 @@ function Home() {
               </div>
             </div>
             <div>
-              <form className="space-y-4">
+              <form className="space-y-4" action="https://formspree.io/f/meozrenw" method="POST">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input type="text" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent" />
+                  <input name="fullName" type="text" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input type="email" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent" />
+                  <input type="email" name="email" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent" />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent h-32"></textarea>
+                  <textarea name="message" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[#FF1494] focus:border-transparent h-32"></textarea>
                 </div>
                 <button className="bg-[#FF1494] text-white px-6 py-2 rounded-full hover:bg-[#D1127A] transition">
                   Send Message
